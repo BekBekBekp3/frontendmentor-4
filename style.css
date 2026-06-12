@@ -1,0 +1,201 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4 ,h5, li{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+p, button{
+    font-family: 'Alata', sans-serif;
+}
+
+.header-section{
+    background-image: url(./images/desktop/image-hero.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.header-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: black;*/
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.header-section .nav-menu{
+    display: flex;
+    justify-content: space-between;
+    padding-block: 60px;
+    padding-inline: 180px;
+}
+
+.header-section .nav-menu ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.header-section .nav-menu ul a{
+    text-decoration: none;
+}
+
+.header-section .nav-menu ul a li{
+    color: #fff;
+}
+
+.header-section .header-text{
+    display: flex;
+    font-size: 40px;
+    color: #fff;
+    padding-inline: 180px;
+    padding-block: 90px 180px;
+}
+
+.header-section .header-text h1{
+    border: 2px solid #fff;
+    max-width: 650px;
+    padding-inline: 40px;
+    padding-block: 40px;
+    line-height: 0.9;
+    text-transform: uppercase;
+}
+
+.interactive {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: end;
+  padding: 8rem 10rem 0 11.3rem;
+}
+
+.interactive .interactive-wrapper{
+    max-width: 560px;
+}
+
+.interactive .interactive-wrapper h2{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.interactive img {
+  width: 100%;
+}
+
+.interactive-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: white;
+    padding: 8rem 10rem 0 7rem;
+    margin-left: -11rem;
+    align-self: end;
+}
+
+.our-creations .creation-wrapper{
+    padding-top: 90px;
+}
+
+.our-creations .creation-wrapper .creation-header{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 180px;
+}
+
+.our-creations .creation-wrapper .creation-header h2{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.our-creations .creation-wrapper .creation-header button{
+    font-size: 16px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background-color: #fff;
+}
+
+.our-creations .creation-wrapper .creation-grid{
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-inline: 180px;
+    gap: 30px;
+}
+
+.creation-grid div {
+    position: relative;
+}
+
+.creation-grid div img {
+    width: 100%;
+    display: block;
+}
+
+.creation-grid div p {
+    position: absolute;
+    bottom: 2.9rem;
+    left: 3rem;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 26px;
+    max-width: 155px;
+    z-index: 1;
+}
+
+.creation-grid div:nth-child(4) p {
+    max-width: 120px;
+}
+
+.creation-grid div::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 90%);
+}
+
+.footer-wrapper{
+    margin-top: 180px;
+    background-color: black;
+    padding-inline: 180px;
+    padding-block: 30px;
+}
+
+.footer-wrapper .footer-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-wrapper .footer-nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-wrapper .footer-nav-wrapper .footer-nav{
+    color: #fff;
+}
+
+.footer-wrapper .footer-nav-wrapper .footer-nav ul{
+    display: flex;
+    gap: 30px;
+    padding-top: 20px;
+    list-style: none;
+}
+
+.footer-wrapper .footer-nav-wrapper .footer-nav ul li{
+    text-transform: capitalize;
+}
+
+.footer-wrapper .footer-nav-wrapper .footer-copyright{
+    display: flex;
+    align-items: end;
+    color: hsl(0, 0%, 85%);
+    opacity: 0.6;
+}
