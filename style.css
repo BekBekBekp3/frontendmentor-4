@@ -25,9 +25,9 @@ p, button{
     left: 0;
     width: 100%;
     height: 100%;
-    /*background-color: black;*/
     opacity: 0.3;
     z-index: 0;
+    pointer-events: none;
 }
 
 .header-section .nav-menu{
@@ -66,6 +66,28 @@ p, button{
     padding-block: 40px;
     line-height: 0.9;
     text-transform: uppercase;
+}
+
+.header-section .nav-menu ul a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.header-section .nav-menu ul a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0px;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.header-section .nav-menu ul a:hover::after {
+    width: 50%;
 }
 
 .interactive {
@@ -121,6 +143,11 @@ p, button{
     background-color: #fff;
 }
 
+.our-creations .creation-wrapper .creation-header button:hover{
+    background-color: hsl(0, 0%, 0%);
+    color: #fff;
+}
+
 .our-creations .creation-wrapper .creation-grid{
     padding-top: 70px;
     display: grid;
@@ -150,7 +177,11 @@ p, button{
     z-index: 1;
 }
 
-.creation-grid div:nth-child(4) p {
+.creation-grid a:hover div p {
+    color: black;
+}
+
+.creation-grid a:nth-child(4) div p {
     max-width: 120px;
 }
 
@@ -159,6 +190,11 @@ p, button{
     position: absolute;
     inset: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 90%);
+    transition: background 0.3s ease;
+}
+
+.creation-grid a:hover div::after {
+    background: rgba(255,255,255,0.6);
 }
 
 .footer-wrapper{
@@ -189,8 +225,11 @@ p, button{
     list-style: none;
 }
 
-.footer-wrapper .footer-nav-wrapper .footer-nav ul li{
+.footer-wrapper .footer-nav-wrapper .footer-nav ul li {
     text-transform: capitalize;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .footer-wrapper .footer-nav-wrapper .footer-copyright{
@@ -198,4 +237,20 @@ p, button{
     align-items: end;
     color: hsl(0, 0%, 85%);
     opacity: 0.6;
+}
+
+.footer-wrapper .footer-nav-wrapper .footer-nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.footer-wrapper .footer-nav-wrapper .footer-nav ul li:hover::after {
+    width: 50%;
 }
